@@ -1,0 +1,303 @@
+/* Styling the html and body */
+html, body {
+    font-family: monospace; /* Use monospace font for the entire page */
+    color: rgb(65, 65, 65); /* Set text color */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    background-color: rgb(0, 0, 0); /* Set background color */
+    line-height: 1.6; /* Line height for readability */
+    height: 100%; /* Full height for html and body */
+    width: 100%; /* Full width for html and body */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    text-align: center; /* Center text alignment */
+    background-image: url("/images/dark-gray-blur-background-vector.jpg"); /* Background image */
+}
+
+/* Styling the main.folder tag */
+main.folder {
+    width: 40%; /* Set width to 40% of the viewport */
+    max-height: 95vh; /* Limit maximum height */
+    padding: 30px; /* Padding inside the main element */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    margin: auto; /* Center the element horizontally */
+}
+
+/* Styling the folder */
+.folder {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    min-height: 95vh; /* Minimum height for the folder */
+    position: relative; /* Relative positioning for child elements */
+    background: rgba(224, 176, 96); /* Folder background color */
+    border-top-right-radius: 5px; /* Rounded top-right corner */
+    border-bottom-right-radius: 5px; /* Rounded bottom-right corner */
+    border-right: 1px solid rgb(66, 66, 66); /* Right border */
+    padding: 30px; /* Padding inside the folder */
+    box-sizing: border-box; /* Include padding in width and height */
+    margin: auto; /* Center the element horizontally */
+}
+
+/* Ensure that the folder link takes up the full size of the .folder */
+.folder-link {
+    text-align: center; /* Center text inside the link */
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit color from parent */
+    position: absolute; /* Absolute positioning */
+    top: 50%; /* Center vertically */
+    right: 14px; /* Position from the right */
+    transform: translateY(-50%) rotate(90deg); /* Center and rotate the link */
+    font-size: 14px; /* Font size for the link */
+    letter-spacing: 1px; /* Spacing between letters */
+    width: 100px; /* Width of the link */
+    height: 20vh; /* Height of the link */
+    z-index: 2; /* Ensure it is above other elements */
+}
+
+/* Sizing and positioning folder-link */
+.folder-link .folder:after {
+    position: relative; /* Ensure the folder is positioned correctly */
+    cursor: pointer; /* Indicate that it's clickable */
+}
+
+/* Creating the side tab */
+.folder:after {
+    content: ''; /* Empty content for pseudo-element */
+    color: black; /* Text color (not used) */
+    position: absolute; /* Absolute positioning */
+    right: -32px; /* Position tab horizontally */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center vertically */
+    width: 30px; /* Width of the tab */
+    height: 20vh; /* Height of the tab */
+    background-color: rgb(179, 147, 92); /* Background color of the tab */
+    z-index: 1; /* Place tab behind other content */
+    border-top-right-radius: 5px; /* Rounded top-right corner */
+    border-left: 2px solid rgb(66, 66, 66); /* Left border */
+    border-bottom-right-radius: 5px; /* Rounded bottom-right corner */
+    box-shadow: 2px 0px 0px rgba(0,0,0,0.1); /* Optional shadow for depth */
+}
+
+/* Stamped Declassified label */
+.declassified::before {
+    content: 'DECLASSIFIED'; /* Text content for the stamp */
+    position: absolute; /* Absolute positioning */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -600%) rotate(-10deg); /* Center and rotate the text */
+    font-size: 300%; /* Font size of the stamp */
+    font-weight: bold; /* Bold text */
+    color: red; /* Text color */
+    border: solid red 2px; /* Red border around the text */
+    opacity: 0.7; /* Slight transparency */
+    z-index: 1; /* Ensure it appears above other content */
+}
+
+/* Styling for Case File */
+.casefile {
+    color: rgba(0, 0, 0, 0.76); /* Text color */
+    font-size: 18px; /* Font size */
+    font-family: Georgia; /* Font family */
+    transform: translate(0%, 2000%); /* Position adjustment */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+}
+
+/* Styling for Case File No: ######## */
+.casefileno {
+    color: rgba(189, 22, 22, 0.76); /* Text color */
+    font-size: 30px; /* Font size */
+    font-family: monospace; /* Font family */
+    transform: translate(0%, 1200%); /* Position adjustment */
+}
+
+/* Center logo in the folder layout */
+.logo {
+    display: block; /* Block display for centering */
+    height: 350px; /* Height of the logo */
+    max-width: 400px; /* Maximum width of the logo */
+    margin: 0 auto; /* Center horizontally */
+    opacity: 0.8; /* Slight transparency */
+    padding: 20px 0; /* Space around the logo */
+    position: absolute; /* Absolute positioning */
+    top: 50%; /* Center vertically */
+    transform: translate(0%, -50%); /* Center vertically */
+}
+
+/* Header styling */
+header {
+    margin-top: 50px; /* Space above the header */
+    margin-bottom: 10px; /* Space below the header */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    text-align: center; /* Center text alignment */
+    color: rgb(65, 65, 65); /* Text color */
+}
+
+/* Navigation Menu styled as folder tabs */
+nav {
+    text-align: center; /* Center text in navigation */
+    font-size: 14px; /* Font size */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center items horizontally */
+    gap: 2px; /* Small gap for a slight overlap */
+    width: 100%; /* Full width of the viewport */
+}
+
+/* Styling each link as a folder tab */
+nav a {
+    width: 80px; /* Width of the tab */
+    padding: 10% 20% auto; /* Padding inside the tab */
+    text-decoration: none; /* Remove underline from links */
+    color: rgb(160, 107, 77); /* Text color */
+    background-color: rgba(224, 176, 96, 0.5); /* Background color of the tab */
+    border-top: 1px solid rgb(160, 107, 77); /* Top border */
+    border-right: 1px solid rgb(160, 107, 77); /* Right border */
+    border-bottom: none; /* Hide bottom border */
+    border-radius: 5px 5px 0 0; /* Rounded top corners */
+    z-index: 1; /* Ensure tabs are on top */
+    font-weight: bold; /* Bold text */
+    justify-content: space-evenly; /* Space tabs evenly */
+}
+
+/* Styling each link as a folder tab on hover */
+nav a:hover {
+    color: rgb(160, 107, 77); /* Text color on hover */
+    background-color: rgba(155, 111, 34, 0.5); /* Background color on hover */
+    border-bottom: none; /* Hide bottom border */
+}
+
+/* Style for the active page/tab */
+nav a.active {
+    background-color: rgba(155, 111, 34, 0.5); /* Background color for active tab */
+    color: white; /* Text color for active tab */
+    z-index: 2; /* Ensure active tab is above others */
+}
+
+/* Sets properties for content class on large displays */
+.content {
+    flex: 1; /* Flex-grow to fill available space */
+    width: 100%; /* Full width of the viewport */
+    height: 100%; /* Full height of the viewport */
+    margin: 0 auto; /* Center horizontally */
+    align-items: center; /* Center items vertically */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    text-align: center; /* Center text alignment */
+    z-index: 2; /* Ensure content is above other elements */
+}
+
+/* Styling the page */
+.page {
+    width: 100%; /* Full width of the viewport */
+    height: 100%; /* Full height of the viewport */
+    overflow-y: scroll; /* Vertical scroll */
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For IE and Edge */
+    padding: 20px; /* Padding inside the page */
+    box-sizing: border-box; /* Include padding in width and height */
+    border-bottom: 1px solid grey; /* Bottom border */
+    margin-bottom: 1px; /* Bottom margin */
+    background: rgba(255, 255, 255); /* White background */
+    box-shadow: 5px 3px 3px 3px rgba(0,0,0,0.1); /* Optional shadow for depth */
+}
+
+/* Aligns images center within p tag */
+.img_align {
+    justify-content: center; /* Center images horizontally */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: row; /* Align items in a row */
+}
+
+/* Sets the attributes of the p tag */
+p {
+    font-size: 12px; /* Font size for paragraphs */
+    text-align: justify; /* Justify text alignment */
+}
+
+/* Sets the attributes of the ol tag */
+ol {
+    font-size: 12px; /* Font size for ordered lists */
+    text-align: justify; /* Justify text alignment */
+}
+
+/* Sets the font-size of the h tags */
+h1 {font-size: 20px;} /* Font size for h1 */
+h2 {font-size: 18px;} /* Font size for h2 */
+h3 {font-size: 16px;} /* Font size for h3 */
+h4 {font-size: 14px;} /* Font size for h4 */
+h5 {font-size: 18px;} /* Font size for h5 */
+h6 {font-size: 12px;} /* Font size for h6 */
+
+/* Sets the text-alignment for the footer */
+footer {
+    text-align: center; /* Center text alignment */
+    margin-top: auto; /* Push footer to bottom */
+    width: 100%; /* Full width of the viewport */
+    position: relative; /* Relative positioning */
+    bottom: 0; /* Position at the bottom */
+    left: 0; /* Position at the left */
+}
+
+footer h6 {
+    margin: 0; /* Remove margin from h6 in footer */
+}
+
+/* Sets properties for content class on small displays */
+@media (max-width: 768px) {
+    main.folder {
+        width: 85%; /* Adjust width for smaller screens */
+        left: -4%; /* Adjust position */
+        height: 90vh; /* Adjust height */
+    }
+    .content, .content-cover, .page {
+        margin: 0 auto; /* Center horizontally */
+        text-align: center; /* Center text alignment */
+        overflow-y: auto; /* Enable vertical scroll */
+    }
+    .declassified::before {
+        content: 'DECLASSIFIED'; /* Text content for the stamp */
+        position: absolute; /* Absolute positioning */
+        top: 50%; /* Center vertically */
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -400%) rotate(-10deg); /* Center and rotate the text */
+        font-size: 300%; /* Font size for mobile */
+        font-weight: bold; /* Bold text */
+        color: red; /* Text color */
+        border: solid red 2px; /* Red border around the text */
+        opacity: 0.7; /* Slight transparency */
+        z-index: 1; /* Ensure it appears above other content */
+    }
+    /* Center logo in the folder layout */
+    .logo {
+        display: block; /* Block display for centering */
+        height: 250px; /* Height of the logo */
+        max-width: 300px; /* Maximum width of the logo */
+        margin: 0 auto; /* Center horizontally */
+        opacity: 0.8; /* Slight transparency */
+        padding: 20px 0; /* Space around the logo */
+        position: absolute; /* Absolute positioning */
+        top: 50%; /* Center vertically */
+        transform: translate(0%, -50%); /* Center vertically */
+    }
+    .casefile {
+        color: rgba(0, 0, 0, 0.76); /* Text color */
+        font-size: 18px; /* Font size */
+        font-family: Georgia; /* Font family */
+        transform: translate(0%, 1800%); /* Position adjustment */
+        top: 50%; /* Center vertically */
+        left: 50%; /* Center horizontally */
+    }
+    .casefileno {
+        color: rgba(189, 22, 22, 0.76); /* Text color */
+        font-size: 30px; /* Font size */
+        font-family: monospace; /* Font family */
+        transform: translate(0%, 1100%); /* Position adjustment */
+    }
+}
